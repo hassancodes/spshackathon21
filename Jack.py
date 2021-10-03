@@ -4,6 +4,25 @@ import pprint
 from matplotlib import pyplot as plt
 import numpy
 import json
+# fetching the form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 parameters = "ALLSKY_SFC_SW_DWN"
 community = "RE"

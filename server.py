@@ -1,6 +1,9 @@
 # We shouldn't install flask in the terminal, it is already imported
 from flask import Flask,render_template
 app = Flask(__name__)
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 
 
 
@@ -20,6 +23,8 @@ def docs():
 @app.route("/aboutus")
 def aboutus():
     return app.send_static_file("aboutus.html")
+
+
 
 
 
