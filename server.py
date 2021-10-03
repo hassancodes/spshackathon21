@@ -6,8 +6,20 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-  return app.send_static_file("index.html")
+    return app.send_static_file("index.html")
 
+@app.route("/crops")
+def crops():
+    return app.send_static_file("crops.html")
+
+
+@app.route("/documentation")
+def docs():
+    return app.send_static_file("documentation.html")
+
+@app.route("/aboutus")
+def aboutus():
+    return app.send_static_file("aboutus.html")
 
 
 
