@@ -6,38 +6,23 @@ import numpy
 import json
 # fetching the form
 
+def call():
+    parameters = "ALLSKY_SFC_SW_DWN"
+    community = "RE"
+    long,lat = "-77.0720","38.8848"
+    start,end = "2020","2020"
 
+    url = "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters={0}&community={1}&longitude={2}&latitude={3}&format=JSON&start={4}&end={5}".format(parameters,community,long,lat,start,end)
+    # store the response of URL
+    response = urlopen(url)
+    # from url in data
+    nasaData = json.loads(response.read())
 
+    HoursOfSun = nasaData["properties"]["parameter"][parameters]
+    return HoursOfSun
 
+# print(call())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-parameters = "ALLSKY_SFC_SW_DWN"
-community = "RE"
-long,lat = "-77.0720","38.8848"
-start,end = "2020","2020"
-
-url = "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters={0}&community={1}&longitude={2}&latitude={3}&format=JSON&start={4}&end={5}".format(parameters,community,long,lat,start,end)
-# store the response of URL
-response = urlopen(url)
-# from url in data
-nasaData = json.loads(response.read())
-
-
-# print the json response
-HoursOfSun = nasaData["properties"]["parameter"][parameters]
 monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul',
 'Aug', 'Sep', 'Oct', 'Nov','Dec']
 arr = numpy.array(range(12))
@@ -47,7 +32,10 @@ powerBill = []
 
 
 # Logic part
-def main():
+def main(len,wid):
+
+# assigning one function to another
+    HoursOfSun = call()
     counter =0
     # data for solar panel
     print( "What is the Length and width of your solar panel in feet")
@@ -88,5 +76,5 @@ def makeGraph():
 
 
 # calling functions
-main()
-makeGraph()
+
+# makeGraph()
