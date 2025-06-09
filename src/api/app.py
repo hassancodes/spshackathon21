@@ -4,7 +4,7 @@ Provides endpoints for accessing static content and API endpoints
 """
 
 from flask import Flask, render_template, jsonify, request, abort
-from main import SolarDataCalculator
+from core.solar_calculator import SolarDataCalculator
 import logging
 
 # Configure logging
