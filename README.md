@@ -23,13 +23,13 @@ This application provides:
    ```
 3. Run the application:
    ```
-   python server.py
+   python src/main.py
    ```
 4. Open your browser and navigate to `http://localhost:8888`
 
 ## Project Structure
 - `main.py`: Contains NASA API integration code
-- `server.py`: Flask web server implementation
+- `api/app.py`: Flask web server implementation
 - `static/`: Contains HTML, CSS, and other static files
 - `README.md`: Project documentation
 
