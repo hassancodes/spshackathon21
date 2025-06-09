@@ -7,7 +7,7 @@ from flask import Flask, render_template, jsonify, request, abort
 from core.solar_calculator import SolarDataCalculator
 import logging
 
-# Configure logging
+# Initialize application-level logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
