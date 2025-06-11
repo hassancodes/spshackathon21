@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>You are my SunShine | Webapp for money Saviours</title>
+  <meta name="description" content="Description Goes Here">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+ <h1 align=center>SunAPP | Save Money Enjoy Life!</h1>
+ <ul class=nav>
+   <li class= nav-li>Home</li>
+      <li class= nav-li>Crops</li>
+        <li class= nav-li>Documentation</li>
+         <li class= nav-li>About Us</li>
+
+ </ul>
+  <script src="js/scripts.js"></script>
+</body>
+</html> -->
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+h1{
+  color:red;
+}
+body{
+  font-family:"sans-serif";
+}
+.nav{
+color:red;
+text-align : center;
+
+}
+
+.nav-li{
+  display:inline;
+  padding-left: 20px;
+  border-color: red;
+}
