@@ -19,7 +19,7 @@ This application provides:
 1. Ensure Python 3.x is installed
 2. Install required dependencies:
    ```
-   pip install flask
+   pip install -r src/requirements.txt
    ```
 3. Run the application:
    ```
@@ -32,12 +32,22 @@ This application provides:
 - `api/app.py`: Flask web server implementation
 - `static/`: Contains HTML, CSS, and other static files
 - `README.md`: Project documentation
+- `docs/`: Markdown documentation used for GitHub Pages
 
 ## API Integration
 The application uses NASA's Power API to fetch solar panel power generation data. The API endpoint is configured to fetch monthly data for a specific location.
 
+## Running Tests
+Run the unit tests with:
+```bash
+pytest
+```
+
 ## Contributing
 Please feel free to submit issues and enhancement requests!
+
+## Documentation
+Additional documentation is stored in the `docs/` directory. When pushed to GitHub, these files can be published using GitHub Pages.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details
