@@ -1,7 +1,7 @@
 
-# SGA Visionary Submission
+# SolarSave
 
-A web application that integrates NASA's Power API to provide solar panel data and crop information.
+SolarSave is a NASA‑powered web application that helps growers plan solar panels and crops. By combining real solar data with straightforward tools, the project demonstrates how space technology can support sustainable agriculture.
 
 ## Project Overview
 This application provides:
@@ -14,6 +14,11 @@ This application provides:
 - Crop information pages
 - Documentation section
 - About us page
+
+### Why SolarSave?
+- Built on trusted NASA POWER data for reliable solar insights
+- Simple HTML interface that can be extended to modern frameworks
+- Open-source code ready for integration with your own tools
 
 ## Setup Instructions
 1. Ensure Python 3.x is installed
