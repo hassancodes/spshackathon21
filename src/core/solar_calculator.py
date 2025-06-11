@@ -83,6 +83,18 @@ class SolarDataCalculator:
         except Exception as e:
             logger.error(f"Error calculating average power: {str(e)}")
             raise
+
+    def get_monthly_power_data(self):
+        """Return monthly solar power data from NASA API."""
+        try:
+            nasa_data = self.fetch_data()
+            return nasa_data["properties"]["parameter"]["PS"]
+        except KeyError as e:
+            logger.error(f"Missing key in API response: {str(e)}")
+            raise Exception("Invalid data format from NASA API")
+        except Exception as e:
+            logger.error(f"Error retrieving monthly data: {str(e)}")
+            raise
     
     def visualize_power_data(self):
         """

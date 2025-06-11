@@ -43,12 +43,14 @@ def get_solar_data():
     try:
         calculator = SolarDataCalculator()
         average_power = calculator.calculate_average_power()
+        monthly_data = calculator.get_monthly_power_data()
         return jsonify({
             'status': 'success',
             'data': {
                 'average_power': average_power,
                 'units': 'W/m²',
-                'year': calculator.start_year
+                'year': calculator.start_year,
+                'monthly_data': monthly_data
             }
         })
     except Exception as e:
