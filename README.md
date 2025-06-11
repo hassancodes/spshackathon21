@@ -27,10 +27,23 @@ This application provides:
    ```
 4. Open your browser and navigate to `http://localhost:8888`
 
+### Frontend (Next.js)
+1. Ensure Node.js is installed
+2. Install dependencies:
+   ```
+   cd nextjs-app && npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Visit `http://localhost:3000` to view the React frontend
+
 ## Project Structure
 - `main.py`: Contains NASA API integration code
 - `api/app.py`: Flask web server implementation
 - `static/`: Contains HTML, CSS, and other static files
+- `nextjs-app/`: Next.js frontend application
 - `README.md`: Project documentation
 - `docs/`: Markdown documentation used for GitHub Pages
 
